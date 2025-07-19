@@ -1,0 +1,226 @@
+/* تعيين الحواف الخاصة بالشريط */
+.app-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  overflow: hidden;  /* إخفاء المحتوى الذي يخرج من الحدود */
+} 
+
+/* .tab:hover {
+  background-color: #008cba;
+} */
+
+
+ 
+/* شريط التقدم */
+.progress-bar-container {
+  /* position: absolute; */
+  bottom: 10px;
+  width: 80%;
+  background-color: #dddddd;
+  border-radius: 25px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #eeebeb;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  
+  height: 100%;
+  background-color: #4caf50;
+   
+  width: 0;
+  transition: width 0.1s ease-in-out;
+}
+
+.progress-text {
+  /* position: absolute; */
+  bottom: 20px;
+  color: #c01010;
+  font-size: 16px;
+  font-weight: bold;
+}
+.sliding-tabs-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* height: 100vh; */
+  /* background-color: #f4f4f4; */
+  font-family: Arial, sans-serif;
+  /* overflow: hidden; */
+
+ 
+}
+
+/* شريط التابات المتحرك */
+.sliding-tabs {
+  display: flex;
+  /* position: absolute; */
+  /* animation: scroll 20s linear infinite;   */
+  /* animation: slideTabs 9s linear infinite; حركة مستمرة من اليمين لليسار */
+  margin-bottom: 20px;
+  font-size: 18px;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  /* transition: animation-play-state 0.3s ease; */
+  animation: scroll 10s linear infinite;
+}
+
+/* إيقاف الأنيميشن عند مرور الماوس */
+.sliding-tabs.paused {
+  animation-play-state: paused; /* إيقاف الأنيميشن */
+}
+
+.tab {
+  /* padding: 10px 10px;
+  /* background: rgba(0, 0, 0, 0.1); */
+  /* border-radius: 5px; */
+  /* cursor: pointer; */
+  /* transition: background 0.3s ease, transform 0.3s ease; */
+  /* margin-right: 15px; */ 
+  
+  /* gap: 10px; */
+  min-width: 200px;
+  text-align: center;
+  margin: 5px;
+  padding: .43rem;
+  /* background-color: var(--skill-bg); */
+  background-color: #444;
+  color: var(--text-muted-color);
+  border-radius: .5rem;
+  font-size: 1.2rem;
+}
+
+/* .tab:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+} */
+
+.tab.active {
+  /* background: rgba(0, 0, 0, 0.3); */
+  font-weight: bold;
+  color: white;
+}
+.tab:hover {
+  background-color: #008cba;
+}
+
+.span{
+  /* position: relative; */
+  position: absolute;
+  top: -40px;
+  /* left: 0; */
+  color: #1f7223;
+  font-size: 14px;
+
+}
+ 
+
+@keyframes scroll {
+ 
+ /* 50% {
+  transform: translateX(20%); 
+ }  */
+
+ from {
+  transform: translateX(0);
+}
+to {
+  transform: translateX(-100%);
+}
+} 
+@media (max-width: 767px) {
+  .scroll{
+      font-size: 1.2rem;
+  }
+}
+
+/* محتوى التاب */
+.tab-content {
+  /* padding: 20px; */
+  /* background: #fff; */
+  border-radius: 10px;
+  
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 30px;
+  transition: opacity 0.5s ease;
+}
+
+.marquee{
+  display: flex
+;
+  overflow: hidden;
+ 
+}
+
+.marquee--reverse .marquee__group {
+  animation-direction: reverse;
+}
+@media (max-width: 767px) {
+  .skill{
+      font-size: 1.2rem;
+  }
+}
+.skill  {
+  gap: 10px;
+  min-width: 200px;
+  text-align: center;
+  padding: .43rem;
+  /* background-color: var(--skill-bg); */
+  background-color: #444;
+  color: var(--text-muted-color);
+  border-radius: .5rem;
+  font-size: 1.2rem;
+}
+.marquee__group {
+  display: flex    ;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  min-width: 100%;
+  animation: scroll-x-0516ec98 30s linear infinite;
+}
+@keyframes scroll-x-0516ec98 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+ 
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.marquee{
+  display: flex
+;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  /* gap: 1rem; */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+}

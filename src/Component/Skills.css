@@ -1,0 +1,37 @@
+.skills-container {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .skills-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill-item {
+    background-color: #2d2d2d;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1em;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .skill-item:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  
