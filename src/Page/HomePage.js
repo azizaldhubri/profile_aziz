@@ -51,24 +51,28 @@ export default function HomePage({locale}){
                     <Typography className=' flex items-center    justify-center flex-col   '  variant="body2" 
                     sx={{ color: 'text.secondary' }}>
                     {t("To contact me via:")}
-                        <div className="flex items-center    justify-center gap-4" 
+                             <div className="flex items-center    justify-center gap-4" 
                             style={{ margin:'auto',width:'100%',fontSize:'40px'}}> 
                                 <Link to='https://www.facebook.com/profile.php?id=100004740935402'>
                                 {/* <FontAwesomeIcon icon={faFacebook} /> */}
-                                <FacebookOutlinedIcon sx={{ fontSize:'35px',color:'blue'}}/>
+                                <FacebookOutlinedIcon sx={{ fontSize:'35px',color:'#0866ff',}}
+                                 className="text-blue-600 hover:text-blue-800 transition duration-300 hover:scale-125"/>
                                 </Link>                      
                                 <Link to='https://github.com/azizaldhubri'>
-                                <GitHubIcon  sx={{ fontSize:'35px',color:''}}/>
+                                <GitHubIcon  sx={{ fontSize:'35px',color:''}}
+                                 className=" hover:text-gray-300 transition duration-300 hover:scale-125"/>
                                 </Link>                   
                                 <Link to={waLink} target="_blank" rel="noopener noreferrer"> 
-                                <WhatsAppIcon   sx={{ fontSize:'35px',color:'#04f904'}}/>
+                                <WhatsAppIcon   sx={{ fontSize:'35px',color:'#04f904'}}
+                                  className="text-green-500 hover:text-green-600 transition duration-300 hover:scale-125"/>
                                 </Link>                   
                             <Link to={mailtoLink} target="_blank" rel="noopener noreferrer"> 
-                                <  EmailIcon sx={{ fontSize:'35px',color:'red'}}/>
+                                <  EmailIcon sx={{ fontSize:'35px',color:'red'}}
+                                 className="text-red-500 hover:text-red-700 transition duration-300 hover:scale-125"/>
                                 </Link>                     
 
                             
-                        </div>           
+                        </div>      
                     </Typography>
                     </CardContent>
               
