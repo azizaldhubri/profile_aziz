@@ -1,5 +1,4 @@
-import * as React from 'react'; 
-import Box from '@mui/material/Box'; 
+ import Box from '@mui/material/Box'; 
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
@@ -12,7 +11,7 @@ import LanguageIcon from '@mui/icons-material/Language';
  import Fade from '@mui/material/Fade';
 import { Link, useLocation } from 'react-router-dom'; 
  import { useTranslation } from 'react-i18next'; 
-
+import React, { useState, useEffect } from 'react';
 const pages = [
   { name: "HOME", path: '/' },
   { name: 'ABOUT', path: '/dashboard/about' },
@@ -20,7 +19,7 @@ const pages = [
 ];
 export default function TopBar(props) {
   const { t, i18n } = useTranslation();
-  const [anchorElNav, setAnchorElNav] = React.useState(0);
+  const [anchorElNav, setAnchorElNav] =useState(0);
  
 
   const handleOpenNavMenu = (event) => {

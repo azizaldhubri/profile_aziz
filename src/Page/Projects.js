@@ -11,7 +11,7 @@ export default function Projects(props) {
     setValue(newValue);
     
   };
-console.log(props.locale)
+ 
   return (
     <section id='/dashboard/Projects' className=" flex justify-center flex-wrap mt-5 ">
       <div
