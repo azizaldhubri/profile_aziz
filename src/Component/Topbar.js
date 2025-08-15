@@ -11,7 +11,7 @@ import LanguageIcon from '@mui/icons-material/Language';
  import Fade from '@mui/material/Fade';
 import { Link, useLocation } from 'react-router-dom'; 
  import { useTranslation } from 'react-i18next'; 
-import React, { useState, useEffect } from 'react';
+import  { useState } from 'react';
 const pages = [
   { name: "HOME", path: '/' },
   { name: 'ABOUT', path: '/dashboard/about' },
@@ -47,14 +47,14 @@ const getCurrentTabIndex = (pathname) => {
   }
 };
 
-  const [value, setValue] = React.useState(getCurrentTabIndex(location.pathname));
+  const [value, setValue] = useState(getCurrentTabIndex(location.pathname));
  
 
   const handleChange = (event, newValue) => {
     setValue(newValue);   
   };
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] =useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {    
     setAnchorEl(event.currentTarget);
@@ -125,20 +125,21 @@ const getCurrentTabIndex = (pathname) => {
                component={Link}
                    to="/"             
             sx={{
+              fontSize:'19px',
                 color:props.mode=== 'dark' ?'#f3e5f5':'#212121',
                  fontWeight: value === 0 ? 'bold' : 'normal'}}
                  />
             <Tab label={t("ABOUT")}            
                component={Link}
                    to="/dashboard/About"             
-            sx={{color:props.mode=== 'dark' ?'#f3e5f5':'#212121' , fontWeight: value === 1 ? 'bold' : 'normal'}} />
+            sx={{fontSize:'19px',color:props.mode=== 'dark' ?'#f3e5f5':'#212121' , fontWeight: value === 1 ? 'bold' : 'normal'}} />
 
 
             <Tab
              label={t("PROJECT")} 
                component={Link}
                 to="/dashboard/Projects"                 
-            sx={{color:props.mode=== 'dark' ?'#f3e5f5':'#212121' , fontWeight: value === 2 ? 'bold' : 'normal'}} />
+            sx={{fontSize:'19px',color:props.mode=== 'dark' ?'#f3e5f5':'#212121' , fontWeight: value === 2 ? 'bold' : 'normal'}} />
          </Tabs>
         </Box> 
           {/* ----------------- box Taps ------------ */}

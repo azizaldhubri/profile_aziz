@@ -12,20 +12,20 @@ export default function Projects(props) {
     
   };
  
-  return (
-    <section id='/dashboard/Projects' className=" flex justify-center flex-wrap mt-5 ">
+  return ( 
+    <section id='/dashboard/Projects' className="   flex justify-center flex-wrap mt-5 ">
       <div
         className={`w-full flex flex-col items-center justify-center mb-5  `
       
         }
       >
         <div
-          className={`box_shadow  w-11/12 md:w-full lg:w-full mt-5 mb-5 flex flex-col items-center justify-center shadow-lg rounded-md p-4 
+          className={`box_shadow  w-11/12 md:w-full lg:w-12/12 mt-5 mb-5 flex flex-col items-center justify-center shadow-lg rounded-md p-4 
           `}
         >
           <p className="text-center text-[50px]">{t("Works & Projects")}</p>
           <p className="text-center text-xl mt-3 w-full md:w-10/12 mb-6">
-            {t("Discover my projects, crafted with care to deliver smooth, engaging web experiences.")}
+            {t("Discover my projects")}
           </p>
 
           
@@ -76,20 +76,27 @@ export default function Projects(props) {
                          Technologies used in the project:Bootstrap, Material-UI, Context, React Hooks"
                       />
                     <ProjectItem
-                      src="/img1/react6.PNG"
-                      title="Human resurce with taskes(Latest) Please Click Here"
-                      link="https://hr-front-end2-gilt.vercel.app/"
+                      src="/img1/tasheel_store.PNG"
+                      title="tasheel_store"
+                      link="https://tasheel-store.vercel.app/"
                       external
-                      desc="A very excellent project that enables us to manage human resources, manage tasks, and control permissions.
-                         Technologies used in the project:Bootstrap, Material-UI, Context, React Hooks"
+                      desc="Sample of an online store built using Redux, React.js, Bootstrap, and Localstorage"
                       />
                   <ProjectItem  
                     src="/img1/www.PNG"
                     title="To Do list"
                     link="https://venerable-kelpie-769c57.netlify.app/"
-                     imgClass="w-full   lg:h-36 md:h-32 xs:h-36 sm:h-48 sm:w-11/12"
+                     imgClass="w-full   lg:h-60 md:h-48 xs:h-36 sm:h-60 sm:w-11/12"
                     external
                     desc="Simple project to manage small tasks"
+                  />
+                  <ProjectItem  
+                    src="/img1/weather1.PNG"
+                    title="Weather"
+                    link="https://thunderous-cat-2eb857.netlify.app/"
+                     imgClass="w-full   lg:h-60 md:h-48 xs:h-36 sm:h-60 sm:w-11/12"
+                    external
+                    desc="Weather"
                   />
                 <ProjectItem
                   src="/img1/ecommerce2.PNG"
@@ -154,7 +161,7 @@ export default function Projects(props) {
           className={`p-5 w-11/12 md:w-10/12 text-center rounded-md shadow-lg mt-10 `}
         sx={{boxShadow:' 1px 2px 4px 8px rgb(11 11 11 / 39%)  '}}>
           <p className="text-2xl">
-           {t("Are You Ready to kickstart your project with a touch of magic?")}
+           {t("Are You Ready")}
           </p>
           <p
             className="mt-3 text-lg"
@@ -162,7 +169,7 @@ export default function Projects(props) {
               fontWeight:'lighter'              
             }}
           >
-           {t("Let's connect and bring ideas to life ✨. I'm open to full-time or freelance opportunities to create impactful web experiences.")}
+           {t("Let's connect")}
           </p>
         </Card>
       </div>
@@ -190,7 +197,7 @@ function ProjectItem({ src, title, link,desc, external ,imgClass = "w-[90%]"}) {
 function DescriptionProject(){ 
   return(
     <div className=' w-2/3  p-2 rounded  -translate-y-2/4 text-black  ' 
-    style={{position:'absolute ',bottom:'0px',zIndex:10000, background:'rgb(214 221 231)'
+    style={{position:'absolute ',bottom:'50px',zIndex:10000, background:'rgb(214 221 231)'
       
     }}>{desc}</div>
   )

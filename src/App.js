@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import   { useEffect, useMemo, useState } from 'react';
 import {   createTheme, ThemeProvider, CssBaseline } from '@mui/material'; 
 import { useTranslation } from 'react-i18next'; 
 import HomePage from './Page/HomePage';
@@ -44,7 +44,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}   >
       <CssBaseline />             
-      <React.Fragment >  
+      <div >  
         <Routes>                              
           <Route path='/'   element={<Dashboard toggleTheme={toggleTheme} mode={mode} 
           handleLangugeClick={handleLangugeClick}
@@ -56,7 +56,7 @@ function App() {
             <Route path='/dashboard/About' element={<About locale={locale}/>}></Route>          
           </Route>
         </Routes>   
-      </React.Fragment> 
+      </div> 
     </ThemeProvider>
   
   );

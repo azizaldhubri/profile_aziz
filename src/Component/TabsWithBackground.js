@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import '../Component/TabsWithBackground.css';
 // import './App.css'
 
@@ -7,30 +7,6 @@ const SlidingTabs = () => {
   const [isAnimationPaused, setIsAnimationPaused] = useState(false); // حالة الأنيميشن
   const tabs = ['Html', 'Css', 'Bootstrap', 'javascript','React','Laravel','Git','MUI-Material']; 
  
-
-  // دالة لتبديل التاب بشكل عشوائي
-  const changeTabRandomly = () => {
-    const randomIndex = Math.floor(Math.random() * tabs.length);
-    // setActiveTab(tabs[randomIndex]);
-    // setPercent(tabs.length*10);
-  };
-
- 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     changeTabRandomly();
-  //     setPercent(tabs.length*10);
-  //   }, 2000); // تغيير التاب كل 5 ثواني
-
-    // تنظيف الinterval عند إلغاء المكون
-  //   return () => clearInterval(interval);
-  // }, []);
-
-  const[precent,setPercent]=useState(1);
-  const changePercet = (e) => {
-    // const randomIndex = Math.floor(Math.random() * tabs.length);
-    setPercent(e*5);
-  };
   const [progress, setProgress] = useState(0);
   const [isMoving, setIsMoving] = useState(true);
   useEffect(() => {

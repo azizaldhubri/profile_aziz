@@ -1,0 +1,30 @@
+ 
+{
+  "Aziz Aldhubri": "Aziz Aldhubri",
+  "about title":"about",
+  "I'm turning ideas into reality.":"I'm turning ideas into reality.",
+  "To contact me via:":"To contact me via:",
+  "I'm Aziz Al-Dhubri":"I'm Aziz Al-Dabry, a front-end developer working to build seamless web experiences using clean code and modern technologies. I also completed a Laravel course, which enabled me to develop integrated back-ends for several projects and connect them to databases.",
+  "Hello There!":"Hello There!",
+  "Download Cv":"Download Cv" ,
+  "HOME":"HOME",
+  "ABOUT":"ABOUT",
+  "PROJECT":"PROJECT",
+  "Are You Ready":"Are You Ready to kickstart your project with a touch of magic?",
+ 
+  "Let's connect":"Let's connect and bring ideas to life ✨. I'm open to full-time or freelance opportunities to create impactful web experiences.",
+  "Works & Projects":"Works & Projects",
+  "Discover":"Discover my projects, crafted with care to deliver smooth, engaging web experiences.",
+  "Hello! I’m Aziz Aldhubri":"Hello! I’m Aziz Aldhubri, a Frontend Developer.",
+
+   "Academic qualification":"Academic qualification: Bachelor’s degree in Information Systems with a very good grade from Sana’a University.",
+  "Training courses":"الدورات التدريبية",
+  "Course":"Course in data analysis, Html, CSS, Bootstrap, Laravel, React",
+
+  "I worked":"I worked on several projects under the supervision of a professional programmer.",
+
+  "description": {
+    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+    "part2": "Switch language between english and german using buttons above."
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import "./Skills.css"; // استيراد التنسيقات
 
 const Skills = ({ skills }) => {
