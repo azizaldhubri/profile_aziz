@@ -12,6 +12,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import { Link, useLocation } from 'react-router-dom'; 
  import { useTranslation } from 'react-i18next'; 
 import  { useState } from 'react';
+import { styled } from "@mui/material/styles";
 const pages = [
   { name: "HOME", path: '/' },
   { name: 'ABOUT', path: '/dashboard/about' },
@@ -62,16 +63,34 @@ const getCurrentTabIndex = (pathname) => {
   const handleClose = (e) => {    
     setAnchorEl(null);
   };
- 
   
+const CustomTab = styled(Tab)(({ theme }) => ({
+  fontSize: "19px",
+  color: props.mode === "dark" ? "#f3e5f5" : "#212121",
+  fontWeight: value === 0 ? "bold" : "normal",
+  padding: "10px",
+  marginLeft: "10px",
+  "&.Mui-selected": {
+    borderBottom: "3px solid #d32d2d",
+    color: "#d32d2d",
+    fontWeight: "bold",
+  },
+  "&:hover": {
+    color: "#ffae00", // 👈 اللون عند المرور
+    transition: "0.3s", // عشان الحركة تكون ناعمة
+  },
+}));
+
+
+
   return (    
-      <Container  className=' flex justify-between align-middle p-2  border   '
-       sx={{  display: { 
-        position:'fixed',
-        zIndex:10 ,       
-        background:props.mode==='dark' ?'#121216fc':'#fefbff',width:'95%',
-        direction:props.locale==='ar' && 'rtl'
-       } }}>
+      <Container  className=' flex justify-between align-middle p-2  border   border-red-600'
+       sx={{   position: 'fixed',
+  zIndex: 10,
+  marginTop: '0.09rem',
+  background: props.mode === 'dark' ? '#121216fc' : '#fefbff',
+  width: '95%',
+  direction: props.locale === 'ar' ? 'rtl' : 'ltr'}}>
         
            
           
@@ -118,28 +137,29 @@ const getCurrentTabIndex = (pathname) => {
          
           {/*  box Taps  */}
         <Box className='  items-center' sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>           
-         <Tabs value={value} onChange={handleChange} aria-label=" tabs example "      
-         >
-            <Tab  
+         <Tabs value={value} onChange={handleChange} aria-label=" tabs example " 
+          TabIndicatorProps={{ style: { display: "none" } }}        
+          >
+            <CustomTab  
                label={t("HOME")}
                component={Link}
                    to="/"             
-            sx={{
-              fontSize:'19px',
-                color:props.mode=== 'dark' ?'#f3e5f5':'#212121',
-                 fontWeight: value === 0 ? 'bold' : 'normal'}}
-                 />
-            <Tab label={t("ABOUT")}            
+            
+                 />          
+
+            <CustomTab  
+               label={t("ABOUT")}
                component={Link}
                    to="/dashboard/About"             
-            sx={{fontSize:'19px',color:props.mode=== 'dark' ?'#f3e5f5':'#212121' , fontWeight: value === 1 ? 'bold' : 'normal'}} />
-
-
-            <Tab
-             label={t("PROJECT")} 
+            
+                 />
+            <CustomTab  
+               label={t("PROJECT")}
                component={Link}
-                to="/dashboard/Projects"                 
-            sx={{fontSize:'19px',color:props.mode=== 'dark' ?'#f3e5f5':'#212121' , fontWeight: value === 2 ? 'bold' : 'normal'}} />
+                   to="/dashboard/Projects"             
+            
+                 />
+            
          </Tabs>
         </Box> 
           {/* ----------------- box Taps ------------ */}

@@ -1,0 +1,181 @@
+@keyframes bgColorMove {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+ 
+
+.animated-box {
+  width: 190px;
+  height: 60px;
+  /* line-height: 100px; */
+  text-align: center;    
+  color: #004632;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;  
+  cursor: pointer;
+  border-radius: 50px; 
+/* border: 1px solid #CDE026; */
+border: 1px solid #CDE026;
+  /* نعمل خلفية بلونين */
+  background: linear-gradient(to left, #ffae00c2  50%,  #61a50a 50%);
+  background-size: 200% 100%;
+  background-position: right; /* يبدأ من اليمين */
+  transition: background-position 1s ease-in-out;
+}
+
+.animated-box:hover {
+        border: 3px dashed #8ef706;
+    color: #FFFFFF;
+  background-position: left; /* يتحرك لليسار */
+}
+
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Keyframes for fadeInLeft */
+/* @keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+.fadeInLeft {
+  /* opacity: 0;   */
+  transform: translateX(-50px); /* تحريك خفيف لليسار */
+}
+
+.fadeInLeft.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease-out; /* يضمن ظهور سلس */
+}
+
+.fadeInButtom {
+  opacity: 0; /* مخفي في البداية */
+  transform: translateY(30px); /* تحريك خفيف لليسار */
+}
+
+.fadeInButtom.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-out; /* يضمن ظهور سلس */
+}
+
+/* باقي التنسيقات */
+.content-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.banner-title h1 {
+  font-size: 48px;
+}
+
+.banner-title h1 span {
+  color: #ff7e5f;
+}
+
+.este-btn .default-btn {
+  padding: 12px 25px;
+  background-color: #ff7e5f;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.este-btn .default-btn:hover {
+  background-color: #feb47b;
+}
+
+.btnR {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btnR::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* يغطي نفس مساحة الزر */
+  border: 2px dashed #269335;
+  border-radius: 50%;
+  animation: none; /* مبدئياً مافي حركة */
+}
+
+.btnR:hover::before {
+  animation: rotateBorder 3.5s linear infinite;
+}
+
+@keyframes rotateBorder {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.fadeInLeft_about {
+  opacity: 0;  
+  transform: translateX(-2px); /* تحريك خفيف لليسار */
+}
+
+.fadeInLeft_about.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease-out; /* يضمن ظهور سلس */
+}
+
+/* Keyframes for fadeInLeft */
+@keyframes fadeInLeft_about {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}

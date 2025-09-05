@@ -2,7 +2,7 @@ import { BottomNavigation, BottomNavigationAction, Box, Card } from '@mui/materi
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import { useTranslation } from 'react-i18next';
-
+import './project.css'
 export default function Projects(props) {
    const { t, i18n } = useTranslation();
   const [value, setValue] = useState('All');
@@ -13,7 +13,7 @@ export default function Projects(props) {
   };
  
   return ( 
-    <section id='/dashboard/Projects' className="   flex justify-center flex-wrap mt-5 ">
+    <section id='/dashboard/Projects' className="   flex justify-center flex-wrap mt-5 opacity-0 translate-y-10 animate-fadeIn">
       <div
         className={`w-full flex flex-col items-center justify-center mb-5  `
       
@@ -55,9 +55,13 @@ export default function Projects(props) {
               '& .MuiBottomNavigationAction-label': {
                 fontSize: value === val ? '1.3rem' : '1rem', // 👈 نشط = كبير
               //  fontWeight: value === val ? '600' : '400',
-                transition: 'color 0.8s ease',
-                
+                transition: 'color 0.8s ease',                
               },
+                 "&:hover": {
+          color: "#1976d2", // يغير اللون عند المرور
+          transform: "scale(1.1)", // تكبير بسيط
+          // borderBottom: "1px solid #1976d2", // خط سفلي أنيق
+          },
             }}
           />
         ))}
@@ -196,36 +200,45 @@ function ProjectItem({ src, title, link,desc, external ,imgClass = "w-[90%]"}) {
  
 function DescriptionProject(){ 
   return(
-    <div className=' w-2/3  p-2 rounded  -translate-y-2/4 text-black  ' 
-    style={{position:'absolute ',bottom:'50px',zIndex:10000, background:'rgb(214 221 231)'
-      
-    }}>{desc}</div>
+    <div   className="
+    absolute z-[10000] w-9/12 p-2 rounded text-black 
+    bg-[rgb(214_221_231)] 
+    top-full md:top-1/2 md:-translate-y-1/2 animate-fadeIn
+  ">{desc}</div>
   )
 }
   
   return (
        <div className="p-3 w-full md:w-1/2 flex items-center justify-center flex-col  relative   " 
-           onMouseEnter={handleOpen}  
-      onMouseLeave={handleClose} 
+      
        >
-      <img src={src} alt={title}   className={`${imgClass} rounded-md`}
-    
-      />
-      <p>{title}</p>
-      {external ? (
-        <Link to={link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-          Visit
-        </Link>
-      ) : (
-        <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">
-          Visit
-        </a>
-      )}
-       
-      {open=== true &&
+        <div  
+        className=" w-full flex items-center justify-center relative    "  
+           onMouseEnter={handleOpen}  
+      onMouseLeave={handleClose} >
+        <img src={src} alt={title}   className={`${imgClass} rounded-md`} />
+
+           {open=== true &&
        <DescriptionProject />
 
       }
+
+        </div>
+      <p>{title}</p>
+      <div className='  w-10 h-10'>
+      {external ? (
+        <Link to={link} target="_blank" rel="noopener noreferrer" className="text-red-500 underline hover:scale-110  ">
+          Visit
+        </Link>
+      ) : (        
+        <a href={link} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-xl">
+          Visit
+        </a>
+      )}
+
+      </div>
+       
+   
         
         
     </div>

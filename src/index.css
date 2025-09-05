@@ -5,3 +5,20 @@
 .box_shadow{    
     box-shadow: 1px 2px 4px 8px rgb(11 11 11 / 39%)
 }
+
+
+/* html {
+  scrollbar-gutter: stable;
+} */
+
+html {
+  overflow-y: scroll;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
