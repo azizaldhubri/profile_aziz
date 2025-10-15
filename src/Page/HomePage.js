@@ -96,7 +96,8 @@ export default function HomePage({locale}){
         <Typography sx={{
           fontSize: 'larger' ,
           fontFamily:'sans-serif' }}>
-            Front-End Developer
+            // Front-End Developer
+       Full stack Developer
         </Typography>
         <Typography gutterBottom variant="h5" component="div">
                 {t('Aziz Aldhubri')}
